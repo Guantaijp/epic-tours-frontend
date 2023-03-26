@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+import About from "./About";
 import "./index.css";
+import Login from "./Login";
+import SignUp from "./SignUp";
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-blue-600">
-      Hello World!
-    </h1>
+    <>
+      <About />
+      <Login />
+      <SignUp />
+    </>
   );
 }
 
