@@ -60,7 +60,6 @@ const ContactUs = () => {
 
   </div>
   </div>
-
   <form className="contact-form" onSubmit={handleSubmit}>
     <h2>Send us a message</h2>
     <label>
