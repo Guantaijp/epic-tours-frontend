@@ -1,12 +1,18 @@
-import React from 'react';
-import './App.css'
-import ContactUs from './components/ContactUs';
 
+import React from "react";
+import About from "./About";
+import "./index.css";
+import Login from "./Login";
+import SignUp from "./SignUp";
 function App() {
   return (
-    <div>
+    <>
+      <About />
+      <Login />
+      <SignUp />
       <ContactUs />
     </div>
+<>
   );
 }
 
