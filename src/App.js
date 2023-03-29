@@ -1,3 +1,4 @@
+
 import React from "react";
 import About from "./About";
 import "./index.css";
@@ -9,7 +10,9 @@ function App() {
       <About />
       <Login />
       <SignUp />
-    </>
+      <ContactUs />
+    </div>
+<>
   );
 }
 
