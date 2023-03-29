@@ -28,7 +28,7 @@ function Navbar() {
                 ABOUT
               </Link>
               <Link
-                to="/contacts"
+                to="/contactus"
                 className="ml-4 px-3 py-2 rounded-md text-2xl font-bold text-black hover:bg-purple-500 hover:text-white"
               >
                 CONTACTS

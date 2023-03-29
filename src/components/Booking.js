@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./booking.css" 
+// import "./booking.css" 
 
 const Booking = ()=> {
   

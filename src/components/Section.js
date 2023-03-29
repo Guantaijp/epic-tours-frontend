@@ -33,7 +33,7 @@ function Section (){
     <div className='p-4 bg-white'>
       <h5 className='font-bold text-xl mb-8'>Amboseli National Park</h5>
     <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
+       <a href='/destinations' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
       View
        </a>
     </div>
@@ -52,7 +52,7 @@ function Section (){
       <div className='p-4'>
         <h5 className='font-bold text-xl mb-8'>Diani Beach</h5>
         <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
+       <a href='/destinations' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
       View
        </a>
     </div>
@@ -72,51 +72,14 @@ function Section (){
           Lake Nakuru National Park
         </h5>
         <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
+       <a href='/destinations' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
       View
        </a>
     </div>
       </div>
     </div>
 
-    {/* Card 4 */}
-    <div className='bg-white rounded-lg overflow-hidden shadow-md'>
-      <img
-        src='lamu.jpg'
-        alt=''
-        className='w-full object-cover'
-        style={{ aspectRatio: '16/9' }}
-      />
-      <div className='p-4'>
-        <h5 className='font-bold text-xl mb-8'>Lamu Island</h5>
-        <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-      View
-       </a>
-    </div>
-      </div>
-    </div>
-
-    {/* Card 5 */}
-    <div className='bg-white rounded-lg overflow-hidden shadow-md'>
-      <img
-        src='maasaimara.jpg'
-        alt=''
-        className='w-full object-cover'
-        style={{ aspectRatio: '16/9' }}
-      />
-      <div className='p-4'>
-        <h5 className='font-bold text-xl mb-8'>
-          Maasai Mara National Reserve
-        </h5>
-        <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
-      View
-       </a>
-    </div>
-      </div>
-    </div>
-
+  
     {/* Card 6 */}
     <div className='bg-white rounded-lg overflow-hidden shadow-md'>
       <img
@@ -128,7 +91,7 @@ function Section (){
       <div className='p-4'>
         <h5 className='font-bold text-xl mb-8'>Tsavo National Park</h5>
         <div className="mt-4">
-       <a href='#' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
+       <a href='/destinations' className='inline-block bg-gray-800 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded-md'>
       View
        </a>
     </div>
