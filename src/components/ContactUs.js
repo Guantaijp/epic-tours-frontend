@@ -59,6 +59,7 @@ const ContactUs = () => {
     <a href="https://ke.linkedin.com"> <FontAwesomeIcon icon={faLinkedin} /></a>
 
   </div>
+  
   </div>
   <form className="contact-form" onSubmit={handleSubmit}>
     <h2>Send us a message</h2>
