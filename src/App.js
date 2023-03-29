@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './App.css'
 import ContactUs from './components/ContactUs';
@@ -9,7 +8,8 @@ import About from "./components/About";
 import "./index.css";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import ContactUs from "./components/ContactUs";
+import DestinationCard from './components/DestinationCard';
+import Destinations from './components/Destinations';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       <About />
       <Login />
       <SignUp />
+      <Destinations />
       <ContactUs />
       <Footer />
     </div>
