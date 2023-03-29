@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function DestinationCard({sortedDestination}){
 
     return (
-< div className="flex flex-col items-center justify-center w-full h-full ">
+    <div className="grid grid-cols-1 gap-2 px-28 py-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
 {sortedDestination.map((destination,index) => (
 <div key={index} className= "card m-2 bg-white">

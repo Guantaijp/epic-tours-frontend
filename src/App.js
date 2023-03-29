@@ -11,6 +11,7 @@ import SignUp from "./components/SignUp";
 import Destinations from './components/Destinations';
 import {  Routes , Route } from 'react-router-dom';
 import Booking from './components/Booking';
+import AuthProvider from './components/AuthContext';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
 
 
   return (
+    <AuthProvider>
     <Routes>
       <Route path="/" element={[<Navbar/>,<Section/>,<Footer/>] } />
       <Route path="/about" element={[<Navbar/>,<About/>,<Footer/>] } />
@@ -63,6 +65,7 @@ function App() {
       <Route path="/contactus" element={[<Navbar/>,<ContactUs/>,<Footer/>] } />
       
     </Routes>
+    </AuthProvider>
   
   );
 }
