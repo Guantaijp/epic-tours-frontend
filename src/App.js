@@ -1,18 +1,22 @@
 
 import React from "react";
-import About from "./About";
+import About from "./components/About";
 import "./index.css";
-import Login from "./Login";
-import SignUp from "./SignUp";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import ContactUs from "./components/ContactUs";
+
 function App() {
   return (
+
     <>
       <About />
       <Login />
       <SignUp />
       <ContactUs />
-    </div>
-<>
+
+    </>
+
   );
 }
 
