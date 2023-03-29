@@ -8,15 +8,17 @@ import About from "./components/About";
 import "./index.css";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import DestinationCard from './components/DestinationCard';
+
+
 import Destinations from './components/Destinations';
+
 
 function App() {
   return (
 
     <div>
-       <Navbar />
-       <Section />
+      <Navbar />
+      <Section />
       <About />
       <Login />
       <SignUp />
