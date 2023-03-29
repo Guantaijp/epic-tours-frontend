@@ -52,7 +52,6 @@ const ContactUs = () => {
     </ul>
     <br/>
     
-      {/* <p>Our social media links</p> */}
  <div className="social-media-icons">
     <a  href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
     <a href="https://twitter.com/"><FontAwesomeIcon icon={faTwitter} /></a>
@@ -83,5 +82,4 @@ const ContactUs = () => {
 </div>
   );
 };
-
 export default ContactUs;
