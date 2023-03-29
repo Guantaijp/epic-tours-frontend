@@ -54,6 +54,7 @@ const ContactUs = () => {
       </label>
       <button type="submit">Submit</button>
       </form>
+      
    </div>
   );
 };
