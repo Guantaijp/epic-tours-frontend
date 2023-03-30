@@ -1,31 +1,51 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Booking = () => {
-  const [formData, setFormData] = useState({
-    phone : "",
-    capacity: "",
-    date: "",
-  });
+
+const Booking = ({destination}) => {
+
+  const [phone, setPhone] = useState('');
+  const [capacity, setCapacity] = useState('');
+  const [date, setDate] = useState('');
+
+  const {id}=useParams()
  
+  const handlePhoneChange = (event) => {
+    setPhone(event.target.value);
+  };
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const handleCapacityChange = (event) => {
+    setCapacity(event.target.value);
+  };
 
-    const { phone, capacity, date,} = formData;
-    if (!phone || !capacity || !date) {
-      alert("Please fill out all fields.");
-      return;
+  const handleDatehange = (event) => {
+    setDate(event.target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+   
+    const book= {
+      phone: phone,
+      capacity: capacity,
+      date: date,
+      destnation_id: destination.id
     }
-  }
+    fetch("https://epic-hcpr.onrender.com/books", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(book)
+      })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            }
+            )
+         
 
-  function handleChange(e) {
-    const key = e.target.name;
-    const value = e.target.value;
-    setFormData({ ...formData, [key]: value });
-  }
-
-  const isFormValid =
-    formData.phone && formData.capacity && formData.date;
+    };
+  
 
   return (
     <div id="form">
@@ -34,16 +54,16 @@ const Booking = () => {
         <div className="mb-3">
           <label className="form-label">Phone No</label>
           <input
-            onChange={handleChange}
+            onChange={handlePhoneChange}
             className="form-control"
-            name="phone No"
+            name="phone"
             placeholder="Type Here..."
           />
         </div>
         <div className="mb-3">
           <label className="form-label">Capacity</label>
           <input
-            onChange={handleChange}
+            onChange={handleCapacityChange}
             className="form-control"
             name="capacity"
             placeholder="Type Here..."
@@ -52,7 +72,7 @@ const Booking = () => {
         <div className="mb-3">
           <label className="form-label">Date</label>
           <input
-            onChange={handleChange}
+            onChange={handleDatehange}
             className="form-control"
             name="date"
             placeholder="Type Here.."
@@ -60,8 +80,7 @@ const Booking = () => {
         </div>
         <button
           type="submit"
-          className="btn btn-outline-light btn-sm m-4"
-          disabled={!isFormValid}
+          className="btn btn-primary btn-sm m-4"
         >
         Book
         </button>

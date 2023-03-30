@@ -21,7 +21,9 @@ function App() {
       <Route path="/" element={[<Navbar/>,<Section/>,<Footer/>] } />
       <Route path="/about" element={[<Navbar/>,<About/>,<Footer/>] } />
       <Route path="/login" element={<Login/>} />
-      <Route path="/booking" element={[<Navbar/>,<Booking/>,<Footer/>] } />
+      <Route path="/booking" element={[<Navbar/>,<Booking
+      destination={destination}
+      />,<Footer/>] } />
       <Route path="/signup" element={<SignUp/>} />
       <Route path="/destinations" element={[<Navbar/>,<Destinations
       />,<Footer/>] } />
