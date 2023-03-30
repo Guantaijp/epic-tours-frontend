@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"
 
 export const AuthContext = createContext();
 
@@ -24,9 +25,22 @@ export default function AuthProvider({children})
         .then(res=>res.json())
         .then(response=>{
             if(response.error){
-                console.log(response.error)
+                // console.log(response.error)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.error,
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
             }else{
-                setUser(response)
+                // setUser(response)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'LoggedIn successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                 navigate("/")
             }
         })
