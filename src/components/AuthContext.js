@@ -47,8 +47,44 @@ export default function AuthProvider({children})
     }
 
      // Register
-    const register = () =>{
-           console.log("Hello from context")
+   const register = (name, email, password ) =>{
+
+        fetch("http://127.0.0.1:3000//signup",{
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+            name,email, password
+            })
+
+        })
+        .then(res=>res.json())
+        .then(response=>{
+            if(response.error){
+                // console.log(response.error)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.error,
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+            }else{
+                // setUser(response)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Registered successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                navigate("/login")
+            }
+        }
+        )
+
+
+
     }
 
      // Logout
