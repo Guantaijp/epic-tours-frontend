@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 import { faFacebook, faTwitter, faInstagram, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
-import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const ContactUs = () => {
 
