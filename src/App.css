@@ -3,7 +3,6 @@
   margin: 0 auto;
   font-family: 'Lucida Sans';
 }
-
 .form-group {
   margin-bottom: 1rem;
 }
@@ -12,20 +11,26 @@ label {
   display:flexbox;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  }
+  }  
 
-input,
+  input,
 textarea {
   width: 100%;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid #060606;
   background-color: white;
+
+  border: 3px solid black;
+  background-color: #3a3333;
+
 }
 
 textarea {
-  height: 150px;
+  height: 50px;
+  color: gold;
 }
+
 
 button {
 
@@ -34,6 +39,8 @@ button {
   border: none;
   cursor: pointer;
 }
+
+
 .contact-us-container {
   display: flex;
   flex-direction: row;
@@ -94,7 +101,12 @@ button {
   height: 150px;
 }
 
+
 .contact-form button {
+
+display: center;
+  background-color: #0d3a48;
+
   color: white;
   padding: 10px 20px;
   border: none;
@@ -102,4 +114,23 @@ button {
   cursor: pointer;
 }
 
- */
+
+.contact-form button:hover {
+  background-color: #152892;
+}
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-media-icons a {
+  margin: 0 10px;
+  color: #050205;
+  font-size: 24px;
+}
+
+.social-media-icons a:hover {
+  color: rgb(238, 35, 221); 
+}
+

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function DestinationCard({destination}){
 
     return (
-< div className="flex flex-col items-center justify-center w-full h-full ">
+    <div className="flex flex-wrap justify-center">
 
 
 <div  className= "card m-2 bg-white">

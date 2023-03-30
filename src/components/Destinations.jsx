@@ -18,12 +18,22 @@ function Destinations() {
       .catch(error => console.error(error));
   }, []);
 
+
   const handleSearch = event => {
     const query = event.target.value.toLowerCase();
     setSearchQuery(query);
     const filtered = destinations.filter(destination => destination.location.toLowerCase().includes(query));
     setFilteredDestinations(filtered);
   };
+
+        <div className=" items-center justify-center w-full h-full ">
+            <h1 className="text-3xl font-semibold text-center text-black-600">Destinations</h1>
+                
+                <DestinationCard sortedDestination={sortedDestination} />
+            
+                
+             
+
 
   const handleSort = event => {
     const option = event.target.value;
