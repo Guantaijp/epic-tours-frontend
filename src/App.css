@@ -1,7 +1,6 @@
-.container {
+/* .container {
   max-width: 600px;
   margin: 0 auto;
-  display:flex;
   font-family: 'Lucida Sans';
 }
 
@@ -21,7 +20,7 @@ textarea {
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid #060606;
-  background-color: #413c3c;
+  background-color: white;
 }
 
 textarea {
@@ -29,8 +28,7 @@ textarea {
 }
 
 button {
-  background-color: #4a4e52;
-  color: #0a0606;
+
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -97,7 +95,6 @@ button {
 }
 
 .contact-form button {
-  background-color: #3c443c;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -105,6 +102,4 @@ button {
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  background-color: #5f6d5f;
-}
+ */

@@ -1,9 +1,16 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlaneDeparture } from '@fortawesome/free-solid-svg-icons'
 
 function SignUp() {
   return (
-    <div className="my-20 border-2 border-black">
-    <h1 className="text-center pt-5 text-2xl font-bold">Epic Tours</h1>
+    <div className=""style={{backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+     <div className='text-center'>
+            <span className="font-bold text-black font-bold  text-2xl flex-shrink-0">
+              <FontAwesomeIcon icon={faPlaneDeparture}  />
+              <span className="ml-4">EPIC TOURS</span>
+              </span>
+      </div>
     <div className=" flex flex-col min-h-screen items-center pb-10 ">
       <form className=" flex flex-col pt-10 px-4 py-5 bg-white border-2 border-gray-400 mt-20 rounded">
         <h1 className="text-2xl font-bold text-left pb-3">Sign Up</h1>
@@ -17,7 +24,7 @@ function SignUp() {
           type="password"
         />
         <button
-          className="bg-black text-white my-5 p-1 rounded-md mx-20"
+          className="bg-purple-900 hover:bg-purple-500 text-white my-5 p-1 rounded-md mx-20"
           type="submit bg-black-200 "
         >
           Sign Up
