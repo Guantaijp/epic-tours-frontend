@@ -14,7 +14,7 @@ const Booking = () => {
   const [capacity, setCapacity] = useState("");
   const [date, setDate] = useState("");
   const [price, setPrice] = useState("");
-  const [usr, setUsr] = useState("");
+  // const [usr, setUsr] = useState("");
   const [destinations,setDestinations] = useState("");
   const { id } = useParams();
 
@@ -32,6 +32,7 @@ const Booking = () => {
 
 
   const isLoggedIn = sessionStorage.getItem("jwtToken") ? true : false;
+  // const user = sessionStorage.getItem("user_id") ? true : false;
   
 
   const handlePhoneChange = (event) => {
@@ -90,10 +91,12 @@ const Booking = () => {
     <div className="m-10 text-center bg-gray-200 ">
       {isLoggedIn ? (
         <>
-          <div className="  mx-20 py-10 min-h-screen">
-        
-            <form className="  w-2/3 text-center border-2" onSubmit={handleSubmit}>
-              <h2 className="items-center text-2xl pb-3">
+
+          <div className=" mx-20 p-20 min-h-screen">
+            
+            <form className="  border-2" onSubmit={handleSubmit}>
+              <h2 className="text-center text-2xl pb-3">
+
                 Book Your Destination{" "}
               </h2>
               <div className="mb-3 text-center">
