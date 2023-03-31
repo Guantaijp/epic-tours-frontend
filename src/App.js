@@ -30,6 +30,7 @@ function App() {
       .catch((error) => console.error(error));
   }, []);
 
+
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     setSearchQuery(query);
@@ -59,10 +60,10 @@ function App() {
         <Route path="/about" element={[<Navbar />, <About />, <Footer />]} />
         <Route path="/login" element={<Login />} />
         <Route
-          path="/booking"
+          path="/booking/:id"
           element={[
             <Navbar />,
-            <Booking destinations={destinations} />,
+            <Booking destinations={destinations}/>,
             <Footer />,
           ]}
         />
