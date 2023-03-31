@@ -90,18 +90,18 @@ const Booking = () => {
     <div className="m-10 text-center bg-gray-200 ">
       {isLoggedIn ? (
         <>
-          <div className="text-center  ml-20 py-10 min-h-screen">
-            <p> The destination{id} </p>
-            <form className="  border-2" onSubmit={handleSubmit}>
-              <h2 className="text-center text-2xl pb-3">
+          <div className="  mx-20 py-10 min-h-screen">
+        
+            <form className="  w-2/3 text-center border-2" onSubmit={handleSubmit}>
+              <h2 className="items-center text-2xl pb-3">
                 Book Your Destination{" "}
               </h2>
-              <div className="mb-3">
-                <div className=" ">
+              <div className="mb-3 text-center">
+                <div className="items-center ">
                   <label className="form-label">Phone No</label>
                   <input
                     onChange={handlePhoneChange}
-                    className="form-control m-2"
+                    className="form-control m-2 mx-10"
                     name="phone"
                     placeholder="Type Here..."
                     value={phone}
