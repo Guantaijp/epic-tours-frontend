@@ -1,16 +1,38 @@
-import React, { useState } from "react";
-// import { useParams } from "react-router-dom";
+import React, { useState,useEffect} from "react";
+import { useParams } from "react-router-dom";
+import { useContext } from 'react';
+import {AuthContext } from './AuthContext';
+import Swal from 'sweetalert2';
 
-const Booking = ({ destinations }) => {
+
+
+
+const Booking = () => {
+  const value = useContext(AuthContext);
+
   const [phone, setPhone] = useState("");
   const [capacity, setCapacity] = useState("");
   const [date, setDate] = useState("");
+  const [price, setPrice] = useState("");
+  const [usr, setUsr] = useState("");
+  const [destinations,setDestinations] = useState("");
+  const { id } = useParams();
 
-  // const { id } = useParams();
 
-  // const destination = destinations.find((dess) => dess.id === id);
+  useEffect(() => {
+    console.log(value)
+    fetch(`https://epic-hcpr.onrender.com/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setDestinations(data);
+      })
+      .catch((error) => console.error(error));
+  }, [id]);
+
+
 
   const isLoggedIn = sessionStorage.getItem("jwtToken") ? true : false;
+  
 
   const handlePhoneChange = (event) => {
     setPhone(event.target.value);
@@ -23,36 +45,53 @@ const Booking = ({ destinations }) => {
   const handleDatehange = (event) => {
     setDate(event.target.value);
   };
+
+  const handlePrice = (event) => {
+    setPrice(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
     const book = {
       phone: phone,
       capacity: capacity,
       date: date,
-      destnation_id: destinations.id,
+      destnation_id: id,
+      price: price,
+      usr_id: value.user.user.id
     };
-    fetch(`https://epic-hcpr.onrender.com/books`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(book),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+      fetch("https://epic-hcpr.onrender.com/books", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(book),
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(response);
+          Swal.fire({
+            title: 'Success!',
+            text: 'Destination Booked',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
+  
+  });
+  
+  }
 
-    console.log(destinations);
-  };
+  
+  
+  
 
   return (
     <div className="m-10 text-center bg-gray-200 ">
       {isLoggedIn ? (
         <>
           <div className="text-center  ml-20 py-10 min-h-screen">
-            <p> The destination {destinations.name}</p>
+            <p> The destination{id} </p>
             <form className="  border-2" onSubmit={handleSubmit}>
               <h2 className="text-center text-2xl pb-3">
                 Book Your Destination{" "}
@@ -65,6 +104,7 @@ const Booking = ({ destinations }) => {
                     className="form-control m-2"
                     name="phone"
                     placeholder="Type Here..."
+                    value={phone}
                   />
                 </div>
               </div>
@@ -75,6 +115,7 @@ const Booking = ({ destinations }) => {
                   className="form-control m-2"
                   name="capacity"
                   placeholder="Type Here..."
+                  value={capacity}
                 />
               </div>
               <div className="mb-3">
@@ -85,6 +126,18 @@ const Booking = ({ destinations }) => {
                   name="date"
                   type="date"
                   placeholder="Type Here.."
+                  value={date}
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label">Price</label>
+                <input
+                  onChange={handlePrice}
+                  className="form-control m-2"
+                  name="price"
+                  type="price"
+                  placeholder="Type Here.."
+                  value={price}
                 />
               </div>
               <button

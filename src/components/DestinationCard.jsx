@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Booking from "./Booking";
 
 
 function DestinationCard({destination}){
@@ -18,18 +19,16 @@ function DestinationCard({destination}){
         <p className="text-sm text-gray-900 mb-2"> <b>Price :</b> {destination.price}</p>
         <p className="text-sm text-gray-900 mb-2"><b>Description :</b> {destination.description.substring(0, 100)}{destination.description.length > 100 ? "..." : ""}</p>
         <div className="text-center ">
-        <Link to="/booking">
+        <Link to={`/booking/${destination.id}`}>
         <button className="px-4 py-2 text-sm text-white bg-purple-900 hover:bg-purple-500 rounded-full mt-3
          shadow-md">
             Book Now
         </button>
         </Link>
         </div>
-    </div>
-</div>
+       </div>
+     </div>
         </div>
-    
-
 
 </div>
     )

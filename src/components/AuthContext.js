@@ -88,7 +88,7 @@ export default function AuthProvider({ children }) {
             showConfirmButton: false,
             timer: 1500,
           });
-          navigate("/");
+          navigate("/login");
         }
       });
   };
@@ -124,7 +124,7 @@ export default function AuthProvider({ children }) {
     })
       .then((res) => res.json())
       .then((response) => {
-        // console.log(response)
+        console.log(response)
         setUser(response);
       });
   }, [change]);
